@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <div id="box"></div>
+    <ul id="myList"></ul>
+</body>
+<script>
+    let header = document.createElement("h");
+    header.textContent = "Spring Flowers in Indiana";
+    header.style.textAlign = "center"
+    header.style.fontSize = "200%"
+    document.body.append(header);
+
+    let newParagraph = document.createElement("p");
+    newParagraph.textContent = "When it comes time for spring in Indiana you never know what you're going to get. You could a bright and sunny day to start out the week and then by the end of the week there could be a foot of snow on the ground. Indiana's spring time weather should honestly baffle scientist with how unpredictable it is.";
+    document.body.append(newParagraph);
+
+    let data = ["Spiderwort - Three round violet petals", "Harbring of Spring - Salt and Pepper", "Wild Ginger - Ginger smelling root"]
+    
+    let list = document.getElementById("myList");
+
+    data.forEach((item) => {
+        let li = document.createElement("li");
+        li.innerText = item;
+        list.appendChild(li);
+    });
+
+</script>
+</html>
